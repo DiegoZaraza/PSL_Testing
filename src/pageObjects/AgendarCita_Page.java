@@ -1,6 +1,4 @@
-package pageObjects;
-
-import java.util.List;
+package pagesObjects;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -44,6 +42,18 @@ public class AgendarCita_Page
 	public static WebElement PanelRespuesta(WebDriver driver)
 	{
 		element = driver.findElement(By.className("panel-body"));
+		return element;
+	}
+	
+	public static WebElement PanelTitulo(WebDriver driver)
+	{
+		element = driver.findElement(By.className("panel-title"));
+		return element;
+	}
+	
+	public static WebElement Inicio(WebDriver driver)
+	{
+		element = driver.findElement(By.linkText("Inicio"));
 		return element;
 	}
 }
