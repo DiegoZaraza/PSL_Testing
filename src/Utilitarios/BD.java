@@ -62,6 +62,20 @@ public class BD
 		return rs;
 
 	}
+	
+	public void insertarSQL(String consulta)
+	{
+		try
+		{
+			Statement stamt = getConexion().createStatement();
+			stamt.executeUpdate(consulta);
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+	}
+	
 	/** desconecta de la base de datos */
 	public void desconectar()throws Exception
 	{
